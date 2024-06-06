@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div style="background-color: red;">
+        Hello
+    </div>
+    <div style="background-color: blue; width: calc(2*50px);">
+        Lohel
+    </div>
+
+    <div id="root">
+
+    </div>
+    <script>
+        // const heading = document.createElement("h1");
+        // heading.innerHTML = "Hello World, wasted my time b***";
+        // document.getElementById("container").append(heading);
+        // // const root = document.getElementById("container");
+        // // root.appendChild(heading);
+
+        const heading1 = React.createElement(
+            "h1", {id: "heading1"}, "Hello World"
+        );
+
+        const heading2 = React.createElement(
+            "h2", {id: "heading2"}, "I don't like you"
+        );
+
+        const container = React.createElement(
+            "div", {id: "container"}, [heading1, heading2]
+        );
+
+        //ReactDOM.createRoot(document.getElementById("container")).render(heading1);
+        //ReactDOM.render(heading1, document.getElementById("container"));
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(container);
+    </script>
+</body>
+</html>
